@@ -1,1 +1,2 @@
-import './style4.scss'
+import './style4.scss';
+import './reset.scss';

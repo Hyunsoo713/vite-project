@@ -1,4 +1,5 @@
 import './style3.scss';
+import './reset.scss';
 import $ from 'jquery';
 function changeImage(){
 document.getElementById("#hyunsoo").src="./1x/Asset 2.png";  
@@ -21,3 +22,5 @@ for(var j = 0; j < target.length; j++){
     this.parentNode.parentNode.style.display = 'none';
   });
 }
+
+

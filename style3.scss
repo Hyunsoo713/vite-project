@@ -188,20 +188,51 @@ button{
 
 }
 
+.artist-page {
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: #fff;
+}
 
 .artist-page-1 {
-  background: url(./a.png) ;
+  background-image: url(./a.png);
+
  }
 .artist-page-2 {
- background: url(./b.png) ;
+  background-image: url(./b.png) ;
 }
 .artist-page-3 {
-  background: url(./c.png);
+  background-image: url(./c.png);
  }
  .artist-page-4 {
-  background: url(./d.png);
+  background-image: url(./d.png);
  }
 
-#popup-1{
+.popup{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 300;
 
+  &-img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+  }
+}
+
+#popup-1, #popup-2, #popup-3, #popup-4 {
+  width: 200px;
+  height: 200px;
+  display: none;
+  background-color: #fff;
 }

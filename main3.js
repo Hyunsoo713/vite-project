@@ -1,20 +1,26 @@
 import './style3.scss';
 import './reset.scss';
 
-
-function changeImage(){
-document.getElementsByClassName(".artist-page-1").src="./a.png";  
-}
-
-var target = document.querySelectorAll('.artist-page-1');
-var targetID;
+var target = document.querySelectorAll('.artist-page');
+console.log(target)
 
 // 팝업 열기
 
 for(var i = 0; i < target.length; i++){
   target[i].addEventListener('click', function(e){
-   // console.log(e.target.id);
-    document.getElementById('popup-1').style.display = 'block';
+   // console.log($(`#popup-${i}`)[0])
+    //console.log(e.target.className)
+    $('.popup')[0].style.display = 'flex';
+
+    if (e.target.className.includes('1')) {
+      $(`#popup-1`)[0].style.display = 'block';
+    } else if(e.target.className.includes('2')) {
+      $(`#popup-2`)[0].style.display = 'block';
+    } else if(e.target.className.includes('3')) {
+      $(`#popup-3`)[0].style.display = 'block';
+    } else if(e.target.className.includes('4')) {
+      $(`#popup-4`)[0].style.display = 'block';
+    }
   });
 }
 

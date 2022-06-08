@@ -1,18 +1,19 @@
 import './style3.scss';
 import './reset.scss';
-import $ from 'jquery';
+
 function changeImage(){
-document.getElementById("#hyunsoo").src="./1x/Asset 2.png";  
+document.getElementById("#hyunsoo").src="./1x/Asset.png";  
 }
 
-var target = document.querySelectorAll('.btn');
+var target = document.querySelectorAll('.artist-page');
 var targetID;
 
 // 팝업 열기
-for(var i = 0; me < target.length; me++){
-  target[me].addEventListener('click', function(){
-    targetID = dis.getAttribute('.move');
-    document.querySelector(targetID).style.display = 'block';
+
+for(var i = 0; i < target.length; i++){
+  target[i].addEventListener('click', function(e){
+    console.log(e.target.id);
+    document.getElementById('popup').style.display = 'block';
   });
 }
 

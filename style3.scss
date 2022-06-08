@@ -122,7 +122,7 @@ html, body{
  transition:0.5s;
 }
 
-.artist-page > img {
+.artist-page>button  {
 width: 20vw;
 z-index: 0;
  &:hover {
@@ -130,7 +130,7 @@ z-index: 0;
   transition:.5s;
  }
 
- &:not(img:hover) {
+ &:not(button:hover) {
   transform:scale(1);
   transition:.3s;
  }
@@ -168,17 +168,40 @@ a{
   transition-delay: .5s;
 }
 
-
 button{
- background: url(./b.png) no-repeat;
- border: none;
-  width: 100px;
-  height: 120px;
+  width: 20vw;
+  cursor: pointer;
+  z-index: 0;
+   &:hover {
+    transform: scale(1.3);
+    transition:.5s;
+   }
+  
+   &:not(img:hover) {
+    transform:scale(1);
+    transition:.3s;
+   }
+   border: none;
+
+   width: 120px;
+   height: 100px;
+
 }
 
-.popup #popup{
-  display: none;
-  width:200px;
-  height:150px;
+
+.artist-page-1 {
+  background: url(./a.png) ;
+ }
+.artist-page-2 {
+ background: url(./b.png) ;
+}
+.artist-page-3 {
+  background: url(./c.png);
+ }
+ .artist-page-4 {
+  background: url(./d.png);
+ }
+
+#popup-1{
 
 }

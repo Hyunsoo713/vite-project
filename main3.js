@@ -23,12 +23,13 @@ for(var i = 0; i < target.length; i++){
     }
   });
 }
+var target1= document.querySelectorAll('.popup');
 
 // 팝업 닫기
-//for(var j = 0; j < target.length; j++){
-  //btnPopClose[j].addEventListener('click', function(){
-    //this.parentNode.parentNode.style.display = 'none';
-  //});
-//}
+for(var j = 0; j < target.length; j++){
+  target1[j].addEventListener('click', function(e){
+    $('.popup')[0].style.display='none';
+  });
+}
 
 

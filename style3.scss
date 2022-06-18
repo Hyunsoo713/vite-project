@@ -62,9 +62,9 @@
 .artist-page{
 z-index: 0;
 width: 30vw;
-background-size: cover;
-width: 270px;
-height: 270px;
+background-size: fill;
+width: 22vw;
+height: 30vh;
 background-repeat: no-repeat;
 background-position: 50% 50%;
 background-color:rgb(11, 101, 71);
@@ -80,6 +80,7 @@ cursor: pointer;
   transition:.3s;
  }
 }
+
 .artist-page-1 {
   background-image: url(./a.png);
 
@@ -94,42 +95,14 @@ cursor: pointer;
   background-image: url(./d.png);
  }
 
-.animate{
-  animation-duration:2s;
-  animation-name: trans-new;
-}
-
-@keyframes trans-new{
-  from{
-    opacity:1;
-    transform:scale(1);
-  }
-
-  to{
-    opacity:0;
-    transform: scale(5);
-  }
-}
-
-@keyframes title-anim {
-  0% {
-    top: -160px;
-  }
-
-  100% {
-    top: 0;
-  }
-}
-
 a{
   transition-delay: .5s;
 }
 
-
 .artist-name{
   padding-left:0px;
   padding-top:1%;
-  color: rgb(50,140,0);
+  color: rgb(216, 255, 196);
   text-align:center;
   z-index:1;
 }

@@ -1,45 +1,41 @@
-html, body{
-  width: 100%;
-  height: 100%;
-  margin:0;
-  padding:0;
- 
-}
-.title-container {
-  position: fixed;
-  top: 0;
-  text-align: center;
-  z-index: 100;
-  height: 160px;
-  margin-left: 30%;
-  margin-right: 30%;
-  padding-top: 20px;
-
-  padding-left:10%;
-  padding-right:10%;
-  background-color: rgb(255, 252, 174);
-  border-style:solid;
-  border-color:white;
-
-  box-shadow: 0px 10px 5px rgba(47, 69, 36, 0.4);
-
-  animation-duration:1s;
-  animation-name: title-anim;
-}
-
-
-#title{
+.date-container{
+  top: 20px;
+  position:relative;
+  width: 300px;
+  height:150px;
+  margin:30px auto;
+  border: 0px solid;
+  }
+  .date-container span{position: absolute; background: darkblue;}
+  
+  .date-container  span:nth-child(1) {left: 0; top: 0; width: 0; height: 2px; transition: width 0.1s;}
+  .date-container  span:nth-child(2) {right: 0; top: 0; width: 2px; height: 0; transition: height 0.1s linear 0.1s;}
+  .date-container  span:nth-child(3) {right: 0; bottom: 0; width: 0; height: 2px; transition: width 0.1s linear 0.2s;}
+  .date-container  span:nth-child(4) {left: 0; bottom: 0; width: 2px; height: 0; transition: height 0.1s linear 0.3s;}
+  
+  
+  .date-container :hover span:nth-child(1) {width: 100%;}
+  .date-container :hover span:nth-child(2) {height: 100%;}
+  .date-container :hover span:nth-child(3) {width: 100%;}
+  .date-container :hover span:nth-child(4) {height: 100%;}
+#tt{
   cursor: pointer;
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
   font-size:100px;
   color: #2c3e50;
+  z-index: 1000px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  position: flex;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  background-clip: text;
 }
-
-.main {
-  padding-top: 160px;
-  font-family: 'Nanum Myeongjo', serif;
-  }
+#tt:hover{
+  color:white;
+  background: rgb(0, 0, 0) ;
+  animation-name: ggs;
+  animation-duration: 3s;
+ }
 
 .artist-container{
   align-items: center;
@@ -50,9 +46,7 @@ html, body{
   margin-left: 30px;
   margin-right: 10px;
   display:block;
-  //border: #000000 ;
   cursor: pointer;
-  //box-shadow: 1px 1px 1px 2px #e4f2dd;
   animation-duration: 4s;
   animation-name:fade;
 }
@@ -65,77 +59,40 @@ html, body{
   }
 }
 
-
-.menu{
-  top: 0;
-  text-align: center;
-  height: 20px;
-  box-shadow: 0px 10px 5px rgba(47, 69, 36, 0.4);
-  animation-duration:1s;
-  animation-name: title-anim;
-  position: fixed;
-  font-family: 'Raleway', sans-serif;
-  background-color: beige;
-  margin-left:8px;
-  padding:2px;
-  font-size:14px;
-  color:black;
-  box-shadow: 0px 4px 2px rgba(47, 69, 36, 0.4);
-
-}
-
-.return:hover{
-  transform: scale(1.2);
-  transition: .5s;
-
-}
-
-.artist-name{
-  padding-left:0px;
-  padding-top:1%;
-  color: rgb(50,140,0);
-  text-align:center;
-  z-index:1;
-}
-
-#first-name:hover{
-  background: rgb(84, 41, 224);
-  color: white;
- transition:0.5s;
-}
-
-#second-name:hover{
-  background: rgb(100, 100, 0);
-  color: white;
- transition:0.5s;
-}
-
-#third-name:hover{
-  background: rgb(89, 7, 63);
-  color: white;
- transition:0.5s;
-}
-
-#fourth-name:hover{
-  background: rgb(11, 101, 71);
-  color: white;
- transition:0.5s;
-}
-
-.artist-page>button  {
-width: 20vw;
+.artist-page{
 z-index: 0;
- &:hover {
+width: 30vw;
+background-size: cover;
+width: 270px;
+height: 270px;
+background-repeat: no-repeat;
+background-position: 50% 50%;
+background-color:rgb(11, 101, 71);
+border: none;
+cursor: pointer;
+
+&:hover {
   transform: scale(1.3);
   transition:.5s;
  }
-
- &:not(button:hover) {
+ &:not(:hover) {
   transform:scale(1);
   transition:.3s;
  }
-
 }
+.artist-page-1 {
+  background-image: url(./a.png);
+
+ }
+.artist-page-2 {
+  background-image: url(./b.png) ;
+}
+.artist-page-3 {
+  background-image: url(./c.png);
+ }
+ .artist-page-4 {
+  background-image: url(./d.png);
+ }
 
 .animate{
   animation-duration:2s;
@@ -168,48 +125,38 @@ a{
   transition-delay: .5s;
 }
 
-button{
-  width: 30vw;
-  cursor: pointer;
-  z-index: 0;
-   &:hover {
-    transform: scale(1.3);
-    transition:.5s;
-   }
-  
-   &:not(img:hover) {
-    transform:scale(1);
-    transition:.3s;
-   }
-   border: none;
 
-   width: 120px;
-   height: 100px;
-
+.artist-name{
+  padding-left:0px;
+  padding-top:1%;
+  color: rgb(50,140,0);
+  text-align:center;
+  z-index:1;
 }
 
-.artist-page {
-  background-size: cover;
-  width: 270px;
-  height: 270px;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-color: #fff;
+#first-name:hover{
+  background: rgb(84, 41, 224);
+  color: white;
+ transition:0.5s;
 }
 
-.artist-page-1 {
-  background-image: url(./a.png);
-
- }
-.artist-page-2 {
-  background-image: url(./b.png) ;
+#second-name:hover{
+  background: rgb(100, 100, 0);
+  color: white;
+ transition:0.5s;
 }
-.artist-page-3 {
-  background-image: url(./c.png);
- }
- .artist-page-4 {
-  background-image: url(./d.png);
- }
+
+#third-name:hover{
+  background: rgb(89, 7, 63);
+  color: white;
+ transition:0.5s;
+}
+
+#fourth-name:hover{
+  background: rgb(11, 101, 71);
+  color: white;
+ transition:0.5s;
+}
 
 
 .popup{

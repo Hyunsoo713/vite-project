@@ -39,7 +39,6 @@
 
 .artist-container{
   align-items: center;
-  size: 100px;
   display: flex;
   float: left;
   margin-top:100px;
@@ -64,12 +63,13 @@ z-index: 0;
 width: 30vw;
 background-size: fill;
 width: 22vw;
-height: 30vh;
+height: 20vw;
 background-repeat: no-repeat;
 background-position: 50% 50%;
 background-color:rgb(11, 101, 71);
 border: none;
 cursor: pointer;
+flex-wrap: nowrap;
 
 &:hover {
   transform: scale(1.3);
@@ -80,6 +80,28 @@ cursor: pointer;
   transition:.3s;
  }
 }
+
+.artist-page2{
+  z-index: 0;
+  width: 30vw;
+  background-size: fill;
+  width: 22vw;
+  height: 30vh;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color:rgb(11, 101, 71);
+  border: none;
+  cursor: pointer;
+  
+  &:hover {
+    transform: scale(1.3);
+    transition:.5s;
+   }
+   &:not(:hover) {
+    transform:scale(1);
+    transition:.3s;
+   }
+  }
 
 .artist-page-1 {
   background-image: url(./a.png);
@@ -95,9 +117,6 @@ cursor: pointer;
   background-image: url(./d.png);
  }
 
-a{
-  transition-delay: .5s;
-}
 
 .artist-name{
   padding-left:0px;
@@ -105,6 +124,24 @@ a{
   color: rgb(216, 255, 196);
   text-align:center;
   z-index:1;
+  
+}
+
+#first-name{
+  font-family: 'Dokdo', cursive;
+  font-size: 25px;
+}
+#second-name{
+  font-family: 'Hachi Maru Pop', cursive;
+  font-size: 20px;
+}
+#third-name{
+  font-family: 'Rock Salt', cursive;
+  font-size: 20px;
+}
+#fourth-name{
+  font-family: 'Homemade Apple', cursive;
+  font-size: 20px;
 }
 
 #first-name:hover{
@@ -154,11 +191,12 @@ a{
 }
 
 #popup-1, #popup-2, #popup-3, #popup-4 {
+  display: none;
   width: 700px;
   height: 500px;
   background-color: rgba(205, 205, 205, 0.5);
   justify-content: center;
-  display: none;
+  align-items: center;
   padding: 10px;
   background-color: none;
 }

@@ -1,105 +1,133 @@
-html{
-  margin:0;
-  padding:0;
-  box-sizing: border-box;
-}
 
-.menu{
-  top: 0;
-  text-align: center;
-  height: 20px;
-  box-shadow: 0px 10px 5px rgba(47, 69, 36, 0.4);
-  animation-duration:1s;
-  animation-name: title-anim;
-  position: fixed;
-  font-family: 'Raleway', sans-serif;
-  background-color: beige;
-  margin-left:8px;
-  padding:2px;
-  font-size:14px;
-  color:black;
-  box-shadow: 0px 4px 2px rgba(47, 69, 36, 0.4);
-
-}
-.title-container {
-  z-index:3;
+.hyunsoo-title-container {
+  z-index:10;
   margin-top: 0px;
   margin-left: 60px;
   margin-right: 60px;
   padding-top: 20px;
   padding-bottom: 20px;
+  
   background-image: url(
    ./hellp.JPG 
   );
+
   color:#ffffff;
   font-weight: 1000;
   border-style:solid;
   border-color:transparent;
-  animation-duration:1s;
-  animation-name: title-anim;
-  box-shadow: 0px 10px 5px rgb(100,100,200,0.4);
-}
-@keyframes title-anim {
-  0% {
-    top: -160px;
-  }
-
-  100% {
-    top: 0;
-  }
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.4);
 }
 
 
-.title{
+.hyunsoo-title{
   font-family: 'Raleway', sans-serif;
   text-align: center;
   font-size:100px;
-
 }
 
-.main {
-  font-family: 'Nanum Myeongjo', serif;
-  position: flex;
-  width:100vw;
+
+
+.page5-main{
+  width: 100vw;
   height: 100vh;
-  align-items:center;
-  justify-content:center;
-  }
-
-.artist-container{
-
-  padding:10%;
-  cursor: pointer;
-  z-index:0;
-  animation-duration: 2s;
-  animation-name:fade;
-
-  &:hover{
-
-    background-color: black;
-   }
-  
-    transition: background-color 1s ease-in;
-    background-color: white;
-
-}
-@keyframes fade{
-  from{
-    opacity: 0;
-  }
-  to{
-    opacity: 1;
-  }
-}
-.artist-page{
-  padding: 10%;
-  align-items: center;
 }
 
-img{
-  z-index: 300;
+.hyunsoo-container{
+  z-index: 2;
   width:70vw;
-
-
+  height: 70vh;
+  position: relative;
+  margin-left:15%;
+  margin-top: 5%;
+  overflow:hidden;
 }
+.hyunsoo-container input[type=radio]{
+  display: none;
+}
+
+ul.imgs{
+  padding: 0;
+  margin: 0;
+  list-style: none;    
+}
+
+ul.imgs li{
+  position: absolute;
+  left: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.slide-img1{
+  width:70vw;
+  height: 70vh;
+object-fit: contain;
+}
+.slide-img2{
+  width:70vw;
+  height: 70vh;
+object-fit: contain;
+}
+.slide-img3{
+  width:70vw;
+  height: 70vh;
+object-fit: contain;
+}
+.slide-img4{
+  width:70vw;
+  height: 70vh;
+object-fit: contain;
+}
+.hyunsoo-container input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(1){
+  left: 0;
+  transition: 0.5s;
+  z-index:1;
+}
+.hyunsoo-container input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(2){
+  left: 0;
+  transition: 0.5s;
+  z-index:1;
+}
+.hyunsoo-container input[type=radio]:nth-child(3):checked~ul.imgs>li:nth-child(3){
+  left: 0;
+  transition: 0.5s;
+  z-index:1;
+}
+.hyunsoo-container input[type=radio]:nth-child(4):checked~ul.imgs>li:nth-child(4){
+  left: 0;
+  transition: 0.5s;
+  z-index:1;
+}
+
+.bullets{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  z-index: 1000;
+}
+.bullets label{
+  display: inline-block;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.55);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.hyunsoo-container input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
+  background-color: #fff;
+}
+.hyunsoo-container input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2){
+  background-color: #fff;
+}
+.hyunsoo-container input[type=radio]:nth-child(3):checked~.bullets>label:nth-child(3){
+  background-color: #fff;
+}
+.hyunsoo-container input[type=radio]:nth-child(4):checked~.bullets>label:nth-child(4){
+  background-color: #fff;
+}
+
+
+
+
 

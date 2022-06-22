@@ -2,16 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-      <link rel="icon" type="image/svg+xml" href="./favicon.17e50649.svg" />
+      <link rel="icon" type="image/svg+xml" href="/assets/favicon.17e50649.svg" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Raleway:wght@300&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dokdo&family=Hachi+Maru+Pop&family=Rock+Salt&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+
       <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script type="module" crossorigin src="./index.c47c900d.js"></script>
-    <link rel="stylesheet" href="./index.fe65a848.css">
+    <script type="module" crossorigin src="/assets/index.af9cbc64.js"></script>
+    <link rel="stylesheet" href="/assets/index.57ba52e1.css">
   </head>
   <body>
 
@@ -43,25 +48,34 @@
           <span></span>
           <span></span>
 
-            <div class="select-page" style="cursor:pointer;" onclick="window.scrollTo(0,800);">
+            <div class="select-page" style="cursor:pointer;">
+              <a class="todate" href="#page2">
             <div id="title">Boxfolio</div>
+          </a>
+            <div id="subtitle">click to open</div>
             </div>
       </div>
     </div>
 
+
     <div id="page2">
     <div class="title-container">
-      <div class='select-page' onclick="window.scrollTo(0,1400);">
-        <div id="title1">2021</div></div>
-      <div class='select-page' onclick="window.scrollTo(0,1400);">
-        <div id="title2">2022</div></div>
+      <div class='select-page'>
+        <a class="2021-page" href="#page3">
+        <div id="title1">2021</div>
+      </a></div>
+      <div class='select-page'>
+        <a class="2022-page" href="#page4">
+        <div id="title2">2022</div></a>
+      </div>
     </div>
     </div>
 
 
 
     <div id="page3">
-    <div class='original' onclick="window.scrollTo(0,1000);">
+    <div class='original'>
+    <a class="todate" href="#page2">
       <div class="date-container">
         <div class="twotwo"> 
             <span></span>
@@ -71,6 +85,7 @@
               <div id="tt">2021</div>
         </div>
       </div>
+    </a>
       </div>
     
     <div class="artist-container">
@@ -101,7 +116,8 @@
 </div>
 
 <div id="page4">
-  <div class='original' onclick="window.scrollTo(0,1000);">
+  <div class='original'>
+  <a class="todate" href="#page2">
     <div class="date-container">
       <div class="twotwo"> 
           <span></span>
@@ -111,6 +127,7 @@
             <div id="tt">2022</div>
       </div>
     </div>
+  </a>
     </div>
   
   <div class="artist-container">
@@ -141,43 +158,75 @@
 </div>
 
 
+
+
   <div class="popup">
-   <div id="popup-1">  
+    <div id="popup-1">
     <button type="button" class="close">x</button> 
-      <a class="move" href="./artist.html">
-        <img class="popup-img" src="./abox.44d0c358.png">
+      <a class="move" href=#page5>
+        <img class="popup-img" src="/assets/abox.44d0c358.png">
       </a>
     </div>
-    <div id="popup-2"> 
+  </div>
+  <div class="popup">
+    <div id="popup-2">
       <button type="button" class="close">x</button>  
       <a class="move" href="./artist.html">
-        <img class="popup-img" src="./bbox.b993d8fc.png">
+        <img class="popup-img" src="/assets/bbox.b993d8fc.png">
       </a>
-    
     </div>
-    <div id="popup-3"> 
+  </div>
+  <div class="popup ">
+    <div id="popup-3">
       <button type="button" class="close">x</button>  
       <a class="move" href="./artist.html">
-        <img class="popup-img"  src="./cbox.928b33b0.png">
+        <img class="popup-img"  src="/assets/cbox.928b33b0.png">
       </a>
- 
-    </div>
-    <div id="popup-4">  
+   </div>
+  </div>
+  <div class="popup">
+    <div id="popup-4">
       <button type="button" class="close">x</button> 
       <a class="move" href="./artist.html">
-        <img class="popup-img" src="./dbox.a706e53f.png">
+        <img class="popup-img" src="/assets/dbox.a706e53f.png">
       </a>
     </div>
   </div>  
 
 
-    
-    
-    
-  
+  <div id="page5">
+    <div class="hyunsoo-title-container">
+    <div class="hyunsoo-title">
+      HYUNSOO
+    </div>
+  </div>
 
-    
+<div class="page5-main">
+<div class="hyunsoo-container">
+  <input type="radio" name="slide" id="slide1" checked>
+  <input type="radio" name="slide" id="slide2">
+  <input type="radio" name="slide" id="slide3">
+  <input type="radio" name="slide" id="slide4">
+
+  <ul id="imgholder" class="imgs">
+    <li><img class='slide-img1' src="/assets/hyunsoo1.1df8af75.jpg"></li>
+    <li><img class='slide-img2' src="/assets/hyunsoo2.6403aac9.jpg"></li>
+    <li><img class='slide-img3' src="/assets/hyunsoo3.d0e48f26.JPG"></li>
+    <li><img class='slide-img4' src="/assets/hyunsoo4.5b780b1c.JPG"></li>
+  </ul>
+    <div class="bullets">
+      <label for="slide1">&nbsp;</label>
+      <label for="slide2">&nbsp;</label>
+      <label for="slide3">&nbsp;</label>
+      <label for="slide4">&nbsp;</label>
+  </div>
+
+</div>
+</div>
+</div>
+
   </body>
+  
 
 
 </html>

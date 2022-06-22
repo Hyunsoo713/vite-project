@@ -36,7 +36,8 @@
   }
   &:not(hover){
     text-decoration: none;
-    transition:.3s; 
+    transition:.5s; 
+    border:none;
   }
 }
 #title2{
@@ -53,9 +54,7 @@
   }
   &:not(hover){
     text-decoration: none;
-    transition:.3s;
+    transition:.5s;
+    border:none;
   }
-}
-a{
-  transition-delay: 2s;
 }

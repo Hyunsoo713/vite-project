@@ -5,6 +5,7 @@ html, body{
   margin:auto 0;
   padding:0;
   overflow: hidden;
+  scroll-behavior:smooth;
 }
 
 
@@ -16,12 +17,25 @@ html, body{
   justify-content: center;
   align-items: center;
   z-index: 1000;
-;
-  top:30px;
+  top:1vh;
   margin-left: auto;
   margin-right:auto;
   width:200px;
+
+  animation-name: in;
+  animation-duration: 1s;
 }
+
+@keyframes in{
+  0%{
+    left:-10%;
+  }
+  100%{
+    left:0%;
+  }
+}
+
+
 .index-page{
   text-decoration: none;
   color:black;
@@ -44,7 +58,7 @@ html, body{
 .header2{
   font-family: 'Raleway', sans-serif;
   text-align: center;
-  background-color: rgb(160, 255, 219);
+  background-color: white;
   margin:10px;
   padding: 10px;
   font-size: 30px;
@@ -58,7 +72,7 @@ html, body{
 .header3{
   font-family: 'Raleway', sans-serif;
   text-align: center;
-  background-color: rgb(166, 164, 255);
+  background-color: rgb(171, 148, 255);
   margin:10px;
   padding: 10px;
   font-size: 30px;
@@ -72,7 +86,7 @@ html, body{
 .header4{
   font-family: 'Raleway', sans-serif;
   text-align: center;
-  background-color: rgb(166, 164, 255);
+  background-color: rgb(98, 200, 255);
   margin:10px;
   padding: 10px;
   font-size: 30px;
@@ -110,6 +124,14 @@ height: 100vh;
   height:100vh;
 }
 #page4{
+  margin-top: 100px;
+  background-color: rgb(98, 200, 255);
+  width:100vw;
+  height:100vh;
+}
+
+#page5{
+  margin-top: 200px;
   background-color: rgb(255, 255, 255);
   width:100vw;
   height:100vh;
@@ -155,7 +177,17 @@ border: 0px solid;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  
+  animation-name: first;
+  animation-duration: 2s;
+  }
+
+  @keyframes first{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
   }
 
 
@@ -175,6 +207,46 @@ border: 0px solid;
   }
 }
 
-a{
-  transition-delay: 2s;
+#subtitle{
+  margin-top:1%;
+  font-family: 'Rock Salt', cursive;
+  text-align: center;
+  color: white;
+  animation-name:hhs;
+  animation-duration: 8s;
 }
+
+@keyframes hhs{
+  0%{
+    opacity:0;
+  }
+  10%{
+    opacity:1;
+  }
+  20%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 1;
+  }
+  40%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  60%{
+    opacity: 0;
+  }
+  70%{
+    opacity: 1;
+  }
+  80%{
+    opacity: 0;
+  }
+  90%{
+    opacity: 1;
+  }
+}
+
+
